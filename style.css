@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Josefin+Sans&family=Lato:wght@100&family=Montserrat:ital,wght@1,300&family=Mouse+Memoirs&family=Poppins:wght@300&family=Rubik:ital@1&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(34, 34, 34);
+}
+
+header nav ul {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    font-size: 22px;
+}
+
+
+header nav ul li {
+    display: block;
+    position: relative;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+header nav ul li:hover::after, header nav ul li:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    margin-top: 30px;
+}
+
+.input input {
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.input i {
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.input i:active {
+    color: rgb(160, 158, 158);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    width: 320px;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+.box {
+    width: 320px;
+    height: 500px;
+    text-align: left;
+    box-shadow: 0px 5px 5px grey;
+}
+
+.box img {
+    width: 320px;
+    height: 200px;
+    box-shadow: 0px 2px 5px grey;
+}
+
+.box span {
+    font-weight: 100;
+}
+
+
+.text {
+    padding: 20px;
+}
+
+.text h3 {
+    margin: 10px 0px;
+}
+
+.text a {
+    font-size: 18px;
+    color: black;
+}
+
+@media screen and (max-width: 840px) {
+    header nav ul {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin:  0 10px;
+    }
+
+    .input input {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 8px;
+    }
+
+    .input input {
+        width: 200px;
+        height: 30px;
+    }
+
+    .box, .box img {
+        width: 250px;
+    }
+
+    .box {
+        height: 400px;
+    }
+    
+    .box img {
+        height: 150px;
+    }
+
+    .list {
+        margin: 30px;
+    }
+}
